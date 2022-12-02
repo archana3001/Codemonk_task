@@ -1,0 +1,116 @@
+.cartitem {
+  display: flex;
+}
+
+.cartitem-block {
+  // border: 1px solid rgb(215, 213, 236);
+  width: 15%;
+  max-width: 15%;
+  padding: 10px;
+  font-size: 14px;
+  //   padding-left: 0px;
+  //   font-weight: 600;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.cartitem-block:nth-child(1) {
+  width: 55%;
+  padding-left: 40px;
+  max-width: 55%;
+  img {
+    height: 100%;
+    margin-left: 3vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    // border: 1px solid black;
+  }
+}
+
+.cartitem-block:nth-child(3) {
+  transform: translateX(-10px);
+  div {
+    border: 1px solid rgb(161, 158, 158);
+    padding: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 4px;
+  }
+  button {
+    width: 40px;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.cartitem-block:nth-child(4) {
+  position: relative;
+  button {
+    // width: 50px;
+    left: 75%;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.cartitem-info {
+  // background-color: aqua;
+  margin-left: 8vw;
+
+  h4 {
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  h5 {
+    font-weight: 400;
+  }
+}
+
+.cartitem-tagline {
+  background-color: rgb(70, 0, 128);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  width: fit-content;
+  padding: 3px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+}
+
+.gift-item {
+  height: 9vh;
+  background-color: rgb(225, 219, 241);
+  width: 55%;
+  margin-left: 4%;
+  margin-bottom: 30px;
+  margin-top: 2px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+
+  // img {
+  //   // margin-left: 2vw;
+  // }
+
+  .badge {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    width: fit-content;
+    padding: 3px;
+    border-radius: 4px;
+    margin-bottom: 3px;
+  }
+}
+.cart-up {
+  position: absolute;
+  width: 15px;
+  top: -10%;
+  left: 4%;
+}
