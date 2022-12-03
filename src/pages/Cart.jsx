@@ -18,7 +18,7 @@ function Cart() {
         decreaseCartQuantity,
         removeCart,
         saving,
-        enterSaving, delivery } = useShoppingCart()
+        enterSaving, delivery, enterCartIntems } = useShoppingCart()
 
     const [cost, setCost] = useState(0)
     const [disc, setDisc] = useState(0)
@@ -26,14 +26,33 @@ function Cart() {
     let temp = 0
     let discTemp = 0
 
+    // let abc = localStorage.getItem("codemonk_cartitems")
+    // console.log(JSON.parse(abc))
+
     useEffect(() => {
         setCost(temp)
         if (cost > discount.minTotal) {
             enterSaving(discount.discountPercentage)
         }
-
         setDisc(discTemp);
     });
+
+    useEffect(() => {
+        let abc = localStorage.getItem("codemonk_cartitems")
+
+        if (abc === null) {
+            enterCartIntems([])
+
+        }
+        else {
+            let abc1 = JSON.parse(abc)
+            // console.log(abc1)
+
+            enterCartIntems(abc1)
+        }
+
+    }, [])
+
 
     // if (delivery > 0 && cost > 0) {
     //     temp += delivery
